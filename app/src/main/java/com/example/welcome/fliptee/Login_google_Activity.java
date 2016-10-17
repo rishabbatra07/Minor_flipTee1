@@ -108,6 +108,10 @@ public class Login_google_Activity extends AppCompatActivity implements View.OnC
             //nametextView.setText(acc.getDisplayName());
             //emailTextView.setText(acc.getEmail());
             Toast.makeText(this,"passed",Toast.LENGTH_LONG).show();
+            SharedPreferences shap=getSharedPreferences("LOGIN_GOOGLE",MODE_PRIVATE);
+            SharedPreferences.Editor editor=shap.edit();
+            editor.putInt("login",100);
+            editor.commit();
             Intent i=new Intent(Login_google_Activity.this,designer_customer_Activity.class);
             startActivity(i);
 

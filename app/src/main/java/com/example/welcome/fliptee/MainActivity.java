@@ -79,13 +79,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SharedPreferences shap=getSharedPreferences("LOGIN_GOOGLE",MODE_PRIVATE);
+        SharedPreferences.Editor editor=shap.edit();
+        editor.putInt("login",50);
         pref = getSharedPreferences("FLIP",0);
         editor = pref.edit();
         boolean is_logged_in = pref.getBoolean("IS_LOGGED_IN",false);
         String email= pref.getString("USER_EMAIL",null);
         String name= pref.getString("USER_NAME",null);
         Toast.makeText(getApplicationContext(),""+is_logged_in,Toast.LENGTH_LONG).show();
-        if(is_logged_in==true)
+        //if(is_logged_in==true)
+        if(shap.getInt("login",89)==100)
         {
             new CountDownTimer(3000, 1000) {
                 public void onFinish() {

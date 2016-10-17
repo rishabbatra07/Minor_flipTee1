@@ -10,10 +10,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -120,11 +118,11 @@ public class customerActivity extends AppCompatActivity implements TaskDelegate 
         item.setIcon(R.mipmap.ic_launcher);
         mDrawerItemList.add(item5);
 
-        DrawerAdapter adapter = new DrawerAdapter(mDrawerItemList);
-        recyclerView = (RecyclerView) findViewById(R.id.drawerRecyclerView);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        recyclerView.setAdapter(adapter);
-        DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        //DrawerAdapter adapter = new DrawerAdapter(mDrawerItemList);
+        //recyclerView = (RecyclerView) findViewById(R.id.drawerRecyclerView);
+        //recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        //recyclerView.setAdapter(adapter);
+        //DrawerLayout drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         //drawerLayout=new ActionBarDrawerToggle()
     }
 
